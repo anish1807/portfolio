@@ -257,27 +257,31 @@ a:hover { color: var(--accent-hover); }
 /* ---- About ---- */
 .about-grid {
   display: grid;
-  grid-template-columns: 200px 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
   align-items: start;
   margin-top: 48px;
 }
 
-.about-photo {
-  width: 200px;
-  height: 200px;
+.about-left { display: none; }
+
+.about-text .about-photo {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid var(--accent);
-  box-shadow: 0 0 0 6px var(--accent-dim);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 5px var(--accent-dim);
+  margin-bottom: 24px;
   flex-shrink: 0;
 }
 
-.about-photo img {
+.about-text .about-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  display: block;
 }
 
 .about-text p {
@@ -627,8 +631,7 @@ a:hover { color: var(--accent-hover); }
   .nav-links.open { display: flex; }
   .nav-toggle { display: block; }
 
-  .about-grid { grid-template-columns: 1fr; gap: 32px; }
-  .about-left { display: flex; justify-content: center; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .about-stats { grid-template-columns: 1fr 1fr; }
 
   .skills-grid { grid-template-columns: 1fr 1fr; }
