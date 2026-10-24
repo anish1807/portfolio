@@ -9,7 +9,6 @@
   --accent: #58a6ff;
   --accent-dim: rgba(88, 166, 255, 0.12);
   --accent-hover: #79b8ff;
-  --green: #3fb950;
   --text: #e6edf3;
   --text-muted: #8b949e;
   --text-dim: #6e7681;
@@ -262,8 +261,6 @@ a:hover { color: var(--accent-hover); }
   align-items: start;
   margin-top: 48px;
 }
-
-.about-left { display: none; }
 
 .about-text .about-photo {
   width: 120px;
@@ -649,4 +646,9 @@ a:hover { color: var(--accent-hover); }
   .about-stats { grid-template-columns: 1fr; }
   .hero-actions { flex-direction: column; align-items: center; }
   .timeline-header { flex-direction: column; gap: 4px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
